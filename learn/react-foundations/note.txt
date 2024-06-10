@@ -1,0 +1,60 @@
+
+3. updating ui with javascript
+
+In this chapter, we'll start building out our project by using JavaScript and DOM methods to add an h1 tag to your project.
+
+### Imperative vs. declarative programming
+
+in other words, imperative programming is like giving a chef step-by-step instructions on how to make a pizza.
+Declarative programming is like ordering a pizza without being concerned about the steps it takes to make the pizza.🍕
+
+4. getting stated with react
+
+https://unpkg.com/  : unpkg is a fast, global content delivery network for everything on npm. Use it quickly and easily load any file from any package using a URL like:
+unpkg.com/package@:version/:file
+
+To use React in your newly created project, load two react scripts from an external website called unpkg.com :
+- react is core React library
+- reat-dom provides DOM-specific methods that enable you to use react with DOM.
+
+ex: index1.html file
+
+Instead of directly manipulating the DOM with plain JavaScript, remove the DOM methods that you had added previously, and add the ReactDOM.createRoot()
+method to target a specific DOM element and create a root to display your React Components in. Then, add the root.render()
+method to render your React code to the DOM.
+
+ex: index2.html file
+
+## what is JSX?
+
+JSX is a syntax extension for javascript that allow you to describe your UI in a familiar HTML -like syntax.
+But browsers don't understand JSX out of the box, so you'll need a javascript compiler, such as a Babel, to transform your JSX code into regular javascript.
+
+### adding Babel to your project
+
+to add Babel to your project, copy and paste the folowing script in your index.html file:
+
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+in addition, you will need to inform Babel what code to transform by changing the script type to type=text/jsx.
+
+ex: index3.html
+
+Additional Resources:
+
+You don't need to know exactly how React updates the UI to start using it, but if you'd like to learn more, here are some additional resources:
+
+UI trees(https://react.dev/learn/preserving-and-resetting-state#the-ui-tree)
+Writing markup with JSX(https://react.dev/learn/writing-markup-with-jsx)
+react-dom/server(https://react.dev/reference/react-dom/server) sections in the React Documentation.
+
+Essential Javascript for React
+
+In the next sections, you will be introduced to some core concepts of React from a JavaScript perspective. Here's a summary of the JavaScript topics that will be mentioned:
+Functions(https://developer.mozilla.org/docs/Web/JavaScript/Guide/Functions) and Arrow Functions(https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+Objects(https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)
+Arrays and arrays methods(https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)
+Destructuring(https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+Template literals(https://developer.mozilla.org/docs/Web/JavaScript/Reference/Template_literals)
+Ternary Operators(https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+Es Modules and Import/Export syntax(https://developer.mozilla.org/docs/Web/JavaScript/Guide/Modules)
