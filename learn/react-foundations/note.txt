@@ -58,3 +58,85 @@ Destructuring(https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operat
 Template literals(https://developer.mozilla.org/docs/Web/JavaScript/Reference/Template_literals)
 Ternary Operators(https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 Es Modules and Import/Export syntax(https://developer.mozilla.org/docs/Web/JavaScript/Guide/Modules)
+
+5. building ui with components
+
+## React core concepts
+
+There are three core concepts of Reacts that you'll need to be familiar with to start building React applications. These are:
+- Components
+- Props
+- state
+
+
+### Components
+
+User interfaces can be broken down into smaller building blocks called components.
+
+Components allow you to build self-contained, reusable snippets of code. if you think of components as LEGO bricks,
+you can take these individual bricks and combine them together to form larger structures. if you need to update a piece of the UI, you can update the speific component or brick.
+this modularity allows your code to be more maintainable as it grows because you can add, update, and delete components without touching the rest of our application.
+the nice thing about react components is that they are just Javascript. Let's see how you can write a react component form a javascript perspective:
+
+### Creating components
+
+in React, components are functions. inside your script tag, create a new function called header:
+ex: index1.html
+A component is a function that return UI elements. Inside the return statement of the element of the function, you can whrite JSX:
+To render this component to the DOM, pass it as the first argument in the root.render()  method:
+But, wait a second. If you try to run the code above in your browser, you'll get an error. To get this to work, there are two things you have to do:
+
+First, React components should be capitalized to distinguish them from plain HTML and JavaScript:
+Second, you use React components the same way you'd use regular HTML tags, with angle brackets <>:
+ex: index2.html
+
+### Nesting Components
+
+Applications usually include more content than a single component. You can nest React components inside each other like you would regular HTML elements.
+a.In your example, create a new component called HomePage:
+b.Then nest the <Header> component inside the new <HomePage>component:
+
+ex: index3.html
+
+### Components trees
+
+You can keep nesting React components this way to form component trees.
+For example, your top-level HomePage component could hold a Header, an Article, and a Footer Component. And each of those components could in turn have their own child components and so on. For example, the Header component could contain a Logo, Title and Navigation component.
+This modular format allows you to reuse components in different places inside your app.
+In your project, since <HomePage> is now your top-level component, you can pass it to the root.render() method:
+ex: index4.html
+
+Additional Resources: 
+- Your first component (https://react.dev/learn/your-first-component)
+- importing and exporting (https://react.dev/learn/importing-and-exporting-components)
+
+
+
+Chapter 6: Displaying Data with Props
+
+So far, if you were to reuse your <Header /> component, it would display the same content both times.
+But what if you want to pass different text or you don't know the information ahead of time because you're fetching data from external source?
+
+Regular HTML elements have attributes that you can use to pass pieces of information that change the behavior of those elemnets. for example, changing the src attribute of an <img> element changes the image that is shown. Changing the href attribute of an <a> tag changes the destination of the link.
+In the same way, you can pass pieces of information as properties to React components. Theses are called props. Take for instance, the possible variations of a button:
+Similar to a JavaScript function, you can design components that accept custom arguments (or props) that change the component's behavior or what is visibly shown when it's rendered to screen. then, you can pass down these props form parent components to child components.
+
+note: in React, data flows down the component tree. This is rendered to as one-day flow, State, which will be discussed in the next chapter, can be passed from parent to child components as props.
+
+### Using props
+
+in your HomePage component, you can pass a custom title prop to the Header component, just like you'd pass HTML attributes.
+And Header, the child component, can accept those props as its first function parameter:
+If you console.log() props, you can see that it's an object with a title property.
+Since props is an object, you can use object destructuring
+to explicitly name the values of props inside your function parameters:
+Then you can replace the content of the <h1> tag with your title variable.
+If you open your file in the browser, you will see that it is displaying the actual word "title". This is because React thinks you're intending to render a plain text string to the DOM.
+You need a way to tell React that this is a JavaScript variable.
+
+### Using variables in JSX
+
+To use the title prop, add curly braces {}. These are a special JSX syntax that allows you to write regular JavaScript directly inside your JSX markup.
+
+ex: index1.html
+
