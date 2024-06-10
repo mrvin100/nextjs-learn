@@ -1,0 +1,6 @@
+In this chpater, we'll start building out our project by using JavaScript and DOM methods to add an h1 tag to your project.
+
+### Imperative vs. declarative programming
+
+in other words, imperative programming is like giving a chef step-by-step instructions on how to make a pizza.
+Declarative programming is like ordering a pizza without being concerned about the steps it takes to make the pizza.🍕
