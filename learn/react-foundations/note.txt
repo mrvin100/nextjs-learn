@@ -138,5 +138,17 @@ You need a way to tell React that this is a JavaScript variable.
 
 To use the title prop, add curly braces {}. These are a special JSX syntax that allows you to write regular JavaScript directly inside your JSX markup.
 
-ex: index1.html
+ex: index0.html
 
+1. An object property with dot notation:
+ex: index1.html
+2. A template literal:
+ex: index2.html
+3. The returned value of a function:
+ex: index3.html
+4. Or ternary operators:
+ex: index4.html
+You can now pass any string to your title prop, or, if you used the ternary operator, you could even not pass a title prop at all, since you've accounted for the default case in your component:
+ex: index5.html
+Your component now accepts a generic title prop which you can reuse in different parts of your application. All you need to do is change the title string:
+ex: index6.html
