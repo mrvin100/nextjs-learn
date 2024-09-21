@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+"use client"
 
-export const metadata: Metadata = {
-  
-  title: "Contact Us",
-}
+import { useRouter } from "next/navigation";
 
 export default function Contact() {
-  return (<div>Contact page</div>);
+  const router = useRouter()
+  return (<div>
+    <h1>Contact page</h1>
+    <button type="button" onClick={()=>router.push('/')}>Home</button>
+  </div>);
 }
